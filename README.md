@@ -17,6 +17,7 @@ SUVIMA serves as an umbrella educational resource covering:
 - **Age-specific content** organised into four groups: Under-5s, School-Age (5-11), Teenagers (12-18), Young Adults (18+)
 - **Audience pathways** for Parents, Young People, and Healthcare Professionals
 - **Resource sections** covering diagnoses, practical strategies, school support, healthcare navigation, and transition planning
+- **Recommended books** for children and families
 
 ## Partner Projects
 
@@ -25,6 +26,14 @@ SUVIMA is part of a family of projects:
 - [TransitionReady](https://transitionready.app) - Supporting healthcare transition for young people
 - [Anna's Ultrasound Adventure](https://www.annas-ultrasound-adventure.app/) - Helping children prepare for ultrasound procedures
 - [Practical Autism Research](https://practical-autism-research.co.uk) - In-depth autism resources and research
+
+## Recommended Books
+
+Part of the "All About My Health" series by Dr Mark Aszkenasy:
+- [Zak's Operation: A Hospital Journey](https://www.amazon.co.uk/dp/B0F2X1BHLW) - Helping children understand hospital experiences
+- [Zak's Blood Test](https://www.amazon.co.uk/dp/B0DXVLXQLS) - Preparing children for blood tests
+- [Anna's Ultrasound Adventure](https://www.amazon.co.uk/dp/B0F1W38DQ7) - Reducing anxiety about ultrasound scans
+- The Genetics of Autism *(Coming Soon)*
 
 ## Tech Stack
 
@@ -87,6 +96,7 @@ suvima/
 - [x] Condition page template with age tabs
 - [x] About page
 - [x] Resources section structure
+- [x] Recommended books section
 - [ ] Full content for Autism, ADHD, Epilepsy
 
 ### Phase 2
