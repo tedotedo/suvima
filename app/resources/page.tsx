@@ -147,9 +147,9 @@ const recommendedBooks = [
   {
     title: "Anna's Ultrasound Adventure",
     subtitle: 'Preparing children for ultrasound scans',
-    author: 'Dr Mark Aszkenasy',
+    author: 'Dr Moira McCarty FRCR',
     description:
-      'An interactive storybook helping children prepare for ultrasound procedures, reducing anxiety and building confidence.',
+      'An interactive storybook helping children prepare for ultrasound procedures, reducing anxiety and building confidence. Written by a consultant radiologist.',
     href: 'https://www.amazon.co.uk/dp/B0F1W38DQ7',
     series: 'All About My Health',
     available: true,

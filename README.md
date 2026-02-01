@@ -29,11 +29,11 @@ SUVIMA is part of a family of projects:
 
 ## Recommended Books
 
-Part of the "All About My Health" series by Dr Mark Aszkenasy:
-- [Zak's Operation: A Hospital Journey](https://www.amazon.co.uk/dp/B0F2X1BHLW) - Helping children understand hospital experiences
-- [Zak's Blood Test](https://www.amazon.co.uk/dp/B0DXVLXQLS) - Preparing children for blood tests
-- [Anna's Ultrasound Adventure](https://www.amazon.co.uk/dp/B0F1W38DQ7) - Reducing anxiety about ultrasound scans
-- The Genetics of Autism *(Coming Soon)*
+Part of the "All About My Health" series:
+- [Zak's Operation: A Hospital Journey](https://www.amazon.co.uk/dp/B0F2X1BHLW) - Helping children understand hospital experiences (Dr Mark Aszkenasy)
+- [Zak's Blood Test](https://www.amazon.co.uk/dp/B0DXVLXQLS) - Preparing children for blood tests (Dr Mark Aszkenasy)
+- [Anna's Ultrasound Adventure](https://www.amazon.co.uk/dp/B0F1W38DQ7) - Reducing anxiety about ultrasound scans (Dr Moira McCarty FRCR)
+- The Genetics of Autism *(Coming Soon)* (Dr Mark Aszkenasy)
 
 ## Tech Stack
 
