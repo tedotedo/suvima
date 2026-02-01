@@ -20,9 +20,9 @@ const footerLinks = {
     { label: 'Accessibility', href: '/accessibility' },
   ],
   tools: [
-    { label: 'EpilepsyHelper App', href: '/tools/epilepsy-helper' },
-    { label: "Anna's Ultrasound Adventure", href: '/tools/annas-ultrasound' },
-    { label: 'All Tools', href: '/tools' },
+    { label: 'EpilepsyHelper', href: 'https://epilepsyhelper.app', external: true },
+    { label: 'TransitionReady', href: 'https://transitionready.app', external: true },
+    { label: 'Practical Autism Research', href: 'https://practical-autism-research.co.uk', external: true },
   ],
 };
 
@@ -83,20 +83,25 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Tools */}
+          {/* Partner Apps */}
           <div>
             <h3 className="font-semibold text-[var(--neutral-100)] mb-4">
-              Tools & Apps
+              Partner Apps
             </h3>
             <ul className="space-y-2">
               {footerLinks.tools.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
-                    className="text-sm text-[var(--neutral-400)] hover:text-[var(--primary-400)] transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-[var(--neutral-400)] hover:text-[var(--primary-400)] transition-colors inline-flex items-center gap-1"
                   >
                     {link.label}
-                  </Link>
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
                 </li>
               ))}
             </ul>

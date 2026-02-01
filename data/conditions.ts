@@ -206,12 +206,32 @@ export const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
-    label: 'Tools & Apps',
-    href: '/tools',
-  },
-  {
     label: 'About',
     href: '/about',
+  },
+];
+
+// External partner apps - standalone applications linked from SUVIMA
+export const PARTNER_APPS = [
+  {
+    name: 'EpilepsyHelper',
+    url: 'https://epilepsyhelper.app',
+    description: 'Track seizures, manage medications, and create care plans for epilepsy management.',
+  },
+  {
+    name: 'TransitionReady',
+    url: 'https://transitionready.app',
+    description: 'Supporting young people preparing for the transition from pediatric to adult healthcare services.',
+  },
+  {
+    name: "Anna's Ultrasound Adventure",
+    url: null, // Coming soon
+    description: 'Interactive storybook helping children prepare for ultrasound procedures.',
+  },
+  {
+    name: 'Practical Autism Research',
+    url: 'https://practical-autism-research.co.uk',
+    description: 'In-depth autism resources and the latest research translated for families.',
   },
 ];
 

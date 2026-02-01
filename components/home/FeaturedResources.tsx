@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const resources = [
   {
-    title: 'EpilepsyHelper App',
+    title: 'EpilepsyHelper',
     description:
       'Track seizures, manage medications, and create care plans for epilepsy management.',
     icon: (
@@ -10,8 +10,22 @@ const resources = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     ),
-    href: '/tools/epilepsy-helper',
+    href: 'https://epilepsyhelper.app',
     color: 'primary',
+    external: true,
+  },
+  {
+    title: 'TransitionReady',
+    description:
+      'Supporting young people preparing for the transition from pediatric to adult healthcare services.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg>
+    ),
+    href: 'https://transitionready.app',
+    color: 'secondary',
+    external: true,
   },
   {
     title: "Anna's Ultrasound Adventure",
@@ -22,8 +36,10 @@ const resources = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
       </svg>
     ),
-    href: '/tools/annas-ultrasound',
-    color: 'secondary',
+    href: '#', // URL to be added when app is live
+    color: 'accent',
+    external: true,
+    comingSoon: true,
   },
   {
     title: 'Practical Autism Research',
@@ -35,7 +51,7 @@ const resources = [
       </svg>
     ),
     href: 'https://practical-autism-research.co.uk',
-    color: 'accent',
+    color: 'primary',
     external: true,
   },
 ];
@@ -97,10 +113,15 @@ export function FeaturedResources() {
                 </div>
                 <h3 className="text-lg font-semibold text-[var(--neutral-900)] dark:text-white mb-2 flex items-center gap-2">
                   {resource.title}
-                  {resource.external && (
+                  {resource.external && !resource.comingSoon && (
                     <svg className="w-4 h-4 text-[var(--neutral-400)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
+                  )}
+                  {resource.comingSoon && (
+                    <span className="px-2 py-0.5 text-xs font-medium bg-[var(--neutral-200)] dark:bg-[var(--neutral-700)] text-[var(--neutral-600)] dark:text-[var(--neutral-300)] rounded-full">
+                      Coming Soon
+                    </span>
                   )}
                 </h3>
                 <p className="text-[var(--neutral-600)] dark:text-[var(--neutral-400)] text-sm">
