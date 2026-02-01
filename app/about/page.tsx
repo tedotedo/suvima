@@ -79,8 +79,13 @@ const partnerProjects = [
   },
   {
     name: 'TransitionReady',
-    description: 'Supporting young people preparing for the transition from pediatric to adult healthcare.',
+    description: 'Supporting young people preparing for the transition from paediatric to adult healthcare.',
     url: 'https://transitionready.app',
+  },
+  {
+    name: "Anna's Ultrasound Adventure",
+    description: 'Interactive storybook helping children prepare for ultrasound procedures.',
+    url: 'https://www.annas-ultrasound-adventure.app/',
   },
   {
     name: 'Practical Autism Research',

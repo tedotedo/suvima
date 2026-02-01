@@ -225,7 +225,7 @@ export const PARTNER_APPS = [
   },
   {
     name: "Anna's Ultrasound Adventure",
-    url: null, // Coming soon
+    url: 'https://www.annas-ultrasound-adventure.app/',
     description: 'Interactive storybook helping children prepare for ultrasound procedures.',
   },
   {

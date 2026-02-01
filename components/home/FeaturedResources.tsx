@@ -36,10 +36,9 @@ const resources = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
       </svg>
     ),
-    href: '#', // URL to be added when app is live
+    href: 'https://www.annas-ultrasound-adventure.app/',
     color: 'accent',
     external: true,
-    comingSoon: true,
   },
   {
     title: 'Practical Autism Research',
@@ -113,15 +112,10 @@ export function FeaturedResources() {
                 </div>
                 <h3 className="text-lg font-semibold text-[var(--neutral-900)] dark:text-white mb-2 flex items-center gap-2">
                   {resource.title}
-                  {resource.external && !resource.comingSoon && (
+                  {resource.external && (
                     <svg className="w-4 h-4 text-[var(--neutral-400)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-                  )}
-                  {resource.comingSoon && (
-                    <span className="px-2 py-0.5 text-xs font-medium bg-[var(--neutral-200)] dark:bg-[var(--neutral-700)] text-[var(--neutral-600)] dark:text-[var(--neutral-300)] rounded-full">
-                      Coming Soon
-                    </span>
                   )}
                 </h3>
                 <p className="text-[var(--neutral-600)] dark:text-[var(--neutral-400)] text-sm">

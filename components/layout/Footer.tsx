@@ -22,6 +22,7 @@ const footerLinks = {
   tools: [
     { label: 'EpilepsyHelper', href: 'https://epilepsyhelper.app', external: true },
     { label: 'TransitionReady', href: 'https://transitionready.app', external: true },
+    { label: "Anna's Ultrasound Adventure", href: 'https://www.annas-ultrasound-adventure.app/', external: true },
     { label: 'Practical Autism Research', href: 'https://practical-autism-research.co.uk', external: true },
   ],
 };
