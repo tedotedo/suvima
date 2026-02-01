@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SUVIMA
+
+**Supporting Understanding Via Information for Medical Awareness**
+
+A comprehensive medical education website providing evidence-based, neurodiversity-affirming information about neurodevelopmental and paediatric conditions for parents, young people, and healthcare professionals.
+
+## Overview
+
+SUVIMA serves as an umbrella educational resource covering:
+- **Neurodevelopmental conditions**: Autism, ADHD, Dyslexia, Dyspraxia/DCD, Developmental Language Disorder, Intellectual Disability
+- **Neurological conditions**: Epilepsy, Cerebral Palsy, Headaches/Migraine
+- **Common childhood conditions**: Asthma, Eczema, Allergies, Sleep Problems, Feeding Difficulties
+
+## Features
+
+- **Condition-based navigation** with comprehensive guides for each condition
+- **Age-specific content** organised into four groups: Under-5s, School-Age (5-11), Teenagers (12-18), Young Adults (18+)
+- **Audience pathways** for Parents, Young People, and Healthcare Professionals
+- **Resource sections** covering diagnoses, practical strategies, school support, healthcare navigation, and transition planning
+
+## Partner Projects
+
+SUVIMA is part of a family of projects:
+- [EpilepsyHelper](https://epilepsyhelper.app) - Seizure tracking and epilepsy management app
+- [TransitionReady](https://transitionready.app) - Supporting healthcare transition for young people
+- [Anna's Ultrasound Adventure](https://www.annas-ultrasound-adventure.app/) - Helping children prepare for ultrasound procedures
+- [Practical Autism Research](https://practical-autism-research.co.uk) - In-depth autism resources and research
+
+## Tech Stack
+
+- **Framework**: Next.js 16 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Fonts**: DM Sans (body), Crimson Pro (headings)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+suvima/
+├── app/                      # Next.js App Router pages
+│   ├── about/               # About SUVIMA page
+│   ├── conditions/          # Conditions listing + [slug] pages
+│   ├── resources/           # Resources landing + [slug] pages
+│   ├── globals.css          # Design system & global styles
+│   ├── layout.tsx           # Root layout with Header/Footer
+│   └── page.tsx             # Homepage
+├── components/
+│   ├── conditions/          # Condition page components
+│   ├── home/                # Homepage sections
+│   ├── layout/              # Header, Footer
+│   └── ui/                  # Reusable UI components
+├── data/                    # Conditions data and navigation
+├── types/                   # TypeScript interfaces
+└── SUVIMA_WEBSITE_PLAN.md   # Original planning document
+```
 
-## Learn More
+## Content Principles
 
-To learn more about Next.js, take a look at the following resources:
+- **Evidence-based**: Aligned with NICE guidelines and current research
+- **Neurodiversity-affirming**: Strength-based, respectful language
+- **Accessible**: Plain language, WCAG 2.1 AA compliant
+- **Age-appropriate**: Content tailored to developmental stages
+- **Culturally sensitive**: Inclusive examples and diverse perspectives
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Phase 1 (Current)
+- [x] Homepage with condition search
+- [x] Condition page template with age tabs
+- [x] About page
+- [x] Resources section structure
+- [ ] Full content for Autism, ADHD, Epilepsy
 
-## Deploy on Vercel
+### Phase 2
+- [ ] Remaining condition content
+- [ ] Downloadable resources (PDFs, checklists)
+- [ ] Professional resources section
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Phase 3
+- [ ] Video content
+- [ ] Multi-language support
+- [ ] Analytics integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+The site can be deployed on Vercel, Netlify, or any platform supporting Next.js:
+
+```bash
+npm run build
+```
+
+## License
+
+All rights reserved. Content is intended for educational purposes only.
+
+## Medical Disclaimer
+
+The information provided on SUVIMA is for educational purposes only and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your doctor or other qualified health provider with any questions you may have regarding a medical condition.
