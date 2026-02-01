@@ -128,10 +128,10 @@ export function FeaturedResources() {
 
         <div className="text-center mt-8">
           <Link
-            href="/tools"
+            href="/resources"
             className="inline-flex items-center text-[var(--primary-600)] dark:text-[var(--primary-400)] font-medium hover:underline"
           >
-            Explore all tools and apps
+            View all resources
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
