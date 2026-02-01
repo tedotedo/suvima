@@ -123,6 +123,49 @@ const colorClasses = {
   },
 };
 
+const recommendedBooks = [
+  {
+    title: "Zak's Operation",
+    subtitle: 'A Hospital Journey',
+    author: 'Dr Mark Aszkenasy',
+    description:
+      'A reassuring story that follows Zak through his hospital experience, helping children understand what happens before, during, and after an operation.',
+    href: 'https://www.amazon.co.uk/dp/B0F2X1BHLW',
+    series: 'All About My Health',
+    available: true,
+  },
+  {
+    title: "Zak's Blood Test",
+    subtitle: 'A book for children who are having a blood test',
+    author: 'Dr Mark Aszkenasy',
+    description:
+      'Gently guides children through the blood test process, explaining what to expect in a reassuring, easy-to-understand way. Includes tips for parents and carers.',
+    href: 'https://www.amazon.co.uk/dp/B0DXVLXQLS',
+    series: 'All About My Health',
+    available: true,
+  },
+  {
+    title: "Anna's Ultrasound Adventure",
+    subtitle: 'Preparing children for ultrasound scans',
+    author: 'Dr Mark Aszkenasy',
+    description:
+      'An interactive storybook helping children prepare for ultrasound procedures, reducing anxiety and building confidence.',
+    href: 'https://www.amazon.co.uk/dp/B0F1W38DQ7',
+    series: 'All About My Health',
+    available: true,
+  },
+  {
+    title: 'The Genetics of Autism',
+    subtitle: 'Understanding the science',
+    author: 'Dr Mark Aszkenasy',
+    description:
+      'An accessible guide to understanding the genetic factors involved in autism, written for families and those seeking to learn more.',
+    href: null,
+    series: null,
+    available: false,
+  },
+];
+
 const audienceResources = [
   {
     audience: 'Parents & Carers',
@@ -258,8 +301,87 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Downloadables Preview */}
+      {/* Recommended Books */}
       <section className="py-16 bg-white dark:bg-[var(--neutral-900)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-xl bg-[var(--accent-100)] dark:bg-[var(--accent-900)] flex items-center justify-center">
+              <svg className="w-6 h-6 text-[var(--accent-600)] dark:text-[var(--accent-400)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-[var(--neutral-900)] dark:text-white">
+                Recommended Books
+              </h2>
+              <p className="text-[var(--neutral-600)] dark:text-[var(--neutral-400)]">
+                Helpful books for children and families
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {recommendedBooks.map((book) => (
+              <div
+                key={book.title}
+                className={`relative rounded-xl border-2 ${
+                  book.available
+                    ? 'border-[var(--neutral-200)] dark:border-[var(--neutral-700)]'
+                    : 'border-dashed border-[var(--neutral-300)] dark:border-[var(--neutral-600)]'
+                } bg-white dark:bg-[var(--neutral-800)] overflow-hidden`}
+              >
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-4 mb-3">
+                    <div>
+                      <h3 className="text-lg font-semibold text-[var(--neutral-900)] dark:text-white">
+                        {book.title}
+                      </h3>
+                      {book.subtitle && (
+                        <p className="text-sm text-[var(--neutral-500)] dark:text-[var(--neutral-400)]">
+                          {book.subtitle}
+                        </p>
+                      )}
+                    </div>
+                    {!book.available && (
+                      <span className="px-2 py-1 text-xs font-medium bg-[var(--neutral-100)] dark:bg-[var(--neutral-700)] text-[var(--neutral-600)] dark:text-[var(--neutral-300)] rounded-full whitespace-nowrap">
+                        Coming Soon
+                      </span>
+                    )}
+                  </div>
+
+                  <p className="text-sm text-[var(--neutral-500)] dark:text-[var(--neutral-400)] mb-3">
+                    By {book.author}
+                    {book.series && (
+                      <span className="text-[var(--primary-600)] dark:text-[var(--primary-400)]"> · {book.series} series</span>
+                    )}
+                  </p>
+
+                  <p className="text-[var(--neutral-600)] dark:text-[var(--neutral-300)] text-sm mb-4">
+                    {book.description}
+                  </p>
+
+                  {book.available && book.href && (
+                    <a
+                      href={book.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm font-medium text-[var(--primary-600)] dark:text-[var(--primary-400)] hover:underline"
+                    >
+                      View on Amazon
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Downloadables Preview */}
+      <section className="py-16 bg-[var(--neutral-50)] dark:bg-[var(--neutral-800)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-[var(--primary-600)] to-[var(--secondary-600)] rounded-2xl p-8 md:p-12 text-white">
             <div className="max-w-2xl">
